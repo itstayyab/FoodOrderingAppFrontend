@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Route, Switch} from "react-router-dom";
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import Home from "./screens/home/Home";
 import Details from "./screens/details/Details";
 import Checkout from "./screens/checkout/Checkout";
@@ -15,11 +15,11 @@ class FoodOrderingApp extends Component {
     render() {
         return (
             <Switch>
-                <Route exact path='/profile' render={(props) => <Profile {...props} />}/>
-                <Route exact path="/" render={(props) => <Home {...props} baseUrl={this.baseUrl}/>}/>
-                <Route exact path="/checkout" render={(props) => <Checkout {...props} baseUrl={this.baseUrl}/>}/>
+                <Route exact path='/profile' render={(props) => <Profile {...props} />} />
+                <Route exact path="/" render={(props) => <Home {...props} baseUrl={this.baseUrl} />} />
+                <Route exact path="/checkout" render={(props) => <Checkout {...props} baseUrl={this.baseUrl} />} />
                 <Route exact path='/restaurant/:restaurantId'
-                       render={(props) => <Details {...props} baseUrl={this.baseUrl}/>}/>
+                    render={(props) => <Details {...props} baseUrl={this.baseUrl} />} />
             </Switch>
         )
     }
